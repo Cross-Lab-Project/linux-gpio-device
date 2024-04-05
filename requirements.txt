@@ -1,0 +1,3 @@
+crosslab-api-client
+crosslab-soa-client
+crosslab-soa-service-electrical
