@@ -30,7 +30,7 @@
             "interfaces": [
               {
                 "interfaceId": "1",
-                "interfaceType": "gpio",1
+                "interfaceType": "gpio",
                 "signals": {
                   "gpio": "LimitXLeft"
                 },
