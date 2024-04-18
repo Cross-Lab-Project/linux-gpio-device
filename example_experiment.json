@@ -1,0 +1,333 @@
+{
+  "status": "running",
+  "devices": [
+    {
+      "device": "https://api.goldi-labs.de/devices/c0e6de30-a4db-4324-8cd6-f32a80b4fadb",
+      "role": "pspu"
+    },
+    {
+      "device": "https://api.goldi-labs.de/devices/9f5df233-499f-4a80-a7ef-241ba16c604d",
+      "role": "gpio"
+    }
+  ],
+  "roles": [
+    {
+      "name": "gpio"
+    },
+    {
+      "name": "pspu"
+    }
+  ],
+  "serviceConfigurations": [
+    {
+      "serviceType": "http://api.goldi-labs.de/serviceTypes/electrical",
+      "configuration": {},
+      "participants": [
+        {
+          "role": "pspu",
+          "serviceId": "sensors",
+          "config": {
+            "interfaces": [
+              {
+                "interfaceId": "1",
+                "interfaceType": "gpio",1
+                "signals": {
+                  "gpio": "LimitXLeft"
+                },
+                "busId": "LimitXLeft",
+                "direction": "out",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "2",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "LimitXRight"
+                },
+                "busId": "LimitXRight",
+                "direction": "out",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "3",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "LimitYBack"
+                },
+                "busId": "LimitYBack",
+                "direction": "out",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "4",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "LimitYFront"
+                },
+                "busId": "LimitYFront",
+                "direction": "out",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "5",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "LimitZBottom"
+                },
+                "busId": "LimitZBottom",
+                "direction": "out",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "6",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "LimitZTop"
+                },
+                "busId": "LimitZTop",
+                "direction": "out",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "7",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "Proximity"
+                },
+                "busId": "Proximity",
+                "direction": "out",
+                "driver": "pspu"
+              }
+            ]
+          }
+        },
+        {
+          "role": "pspu",
+          "serviceId": "actuators",
+          "config": {
+            "interfaces": [
+              {
+                "interfaceId": "8",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "XMotorLeft"
+                },
+                "busId": "XMotorLeft",
+                "direction": "in",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "9",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "XMotorRight"
+                },
+                "busId": "XMotorRight",
+                "direction": "in",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "10",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "YMotorBack"
+                },
+                "busId": "YMotorBack",
+                "direction": "in",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "11",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "YMotorFront"
+                },
+                "busId": "YMotorFront",
+                "direction": "in",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "12",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "ZMotorBottom"
+                },
+                "busId": "ZMotorBottom",
+                "direction": "in",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "13",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "ZMotorTop"
+                },
+                "busId": "ZMotorTop",
+                "direction": "in",
+                "driver": "pspu"
+              },
+              {
+                "interfaceId": "14",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "Magnet"
+                },
+                "busId": "Magnet",
+                "direction": "in",
+                "driver": "pspu"
+              }
+            ]
+          }
+        },
+        {
+          "role": "gpio",
+          "serviceId": "gpio",
+          "config": {
+            "interfaces": [
+              {
+                "interfaceId": "29",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio0"
+                },
+                "busId": "LimitXLeft",
+                "direction": "in",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "30",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio1"
+                },
+                "busId": "LimitXRight",
+                "direction": "in",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "31",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio2"
+                },
+                "busId": "LimitYBack",
+                "direction": "in",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "32",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio3"
+                },
+                "busId": "LimitYFront",
+                "direction": "in",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "33",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio4"
+                },
+                "busId": "LimitZBottom",
+                "direction": "in",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "34",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio5"
+                },
+                "busId": "LimitZTop",
+                "direction": "in",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "35",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio6"
+                },
+                "busId": "Proximity",
+                "direction": "in",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "36",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio7"
+                },
+                "busId": "XMotorLeft",
+                "direction": "out",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "37",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio8"
+                },
+                "busId": "XMotorRight",
+                "direction": "out",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "38",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio9"
+                },
+                "busId": "YMotorBack",
+                "direction": "out",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "39",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio10"
+                },
+                "busId": "YMotorFront",
+                "direction": "out",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "40",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio11"
+                },
+                "busId": "ZMotorBottom",
+                "direction": "out",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "41",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio12"
+                },
+                "busId": "ZMotorTop",
+                "direction": "out",
+                "driver": "gpio"
+              },
+              {
+                "interfaceId": "42",
+                "interfaceType": "gpio",
+                "signals": {
+                  "gpio": "gpio13"
+                },
+                "busId": "Magnet",
+                "direction": "out",
+                "driver": "gpio"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
