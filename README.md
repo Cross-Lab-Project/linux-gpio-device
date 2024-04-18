@@ -9,6 +9,7 @@ yes '' | make localmodconfig
 # configure gpio-sim here
 make menuconfig
 make -j$(nproc)
+make bzImage
 sudo make modules_install
 sudo make install
 ```
