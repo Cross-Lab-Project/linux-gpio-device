@@ -25,5 +25,7 @@ cd Python-3.10.14
 sudo make altinstall
 ```
 
+```
 sudo apt update && sudo apt install libopus-dev libvpx-dev
 sudo python3.10 -m pip install -r requirements.txt
+```
