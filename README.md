@@ -29,3 +29,19 @@ sudo make altinstall
 sudo apt update && sudo apt install libopus-dev libvpx-dev
 sudo python3.10 -m pip install -r requirements.txt
 ```
+
+After installation of new kernel and Python, you might want to restart your device and install the crosslab-virtual-gpio daemon. The install script only works on systemd enabled systems. It does not check for systemd usage!
+```
+cd src
+sudo ./install
+```
+
+For running the example:
+
+* Open a PSPU web frontend using the json description in example.
+* Instantiate the GPIOs (only once) and start the Python example:
+```
+cd example
+./init_gpios.sh
+python ./control_3axis.py
+```

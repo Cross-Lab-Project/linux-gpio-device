@@ -1,0 +1,11 @@
+[Unit]
+Description=CrossLab Virtual GPIO Driver
+After=network.target
+
+[Service]
+ExecStart=/usr/local/sbin/crosslab-virtual-gpio
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
