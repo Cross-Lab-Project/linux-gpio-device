@@ -1,15 +1,13 @@
 import gpio as GPIO
 import time
 
-#
-# Example for controlling virtual 3-axis portal
-# by using physical buttons of "Joy-Pi Experimentierkoffer"
-#
-
 START_GOLDI_GPIO = 578
 
 buttons = {
         "ButtonRight":   531,
+        "ButtonLeft":    537,
+        "ButtonUp":      538,
+        "ButtonDown":    536,
         }
 
 sensors = {
@@ -43,10 +41,13 @@ for a in actuators:
 
 while True:
     for b in buttons:
-        if GPIO.input(buttons["ButtonRight"]) == GPIO.LOW:
-            if GPIO.input(sensors["LimitXRight"]) == GPIO.LOW:
-                GPIO.output(actuators["XmotorLeft"], GPIO.LOW)
-                GPIO.output(actuators["XmotorRight"], GPIO.HIGH)
+        if GPIO.input(buttons["ButtonRight"]) == GPIO.LOW and \
+                GPIO.input(sensors["LimitXRight"]) == GPIO.LOW:
+            GPIO.output(actuators["XmotorRight"], GPIO.HIGH)
         else:
             GPIO.output(actuators["XmotorRight"], GPIO.LOW)
+        if GPIO.input(buttons["ButtonLeft"]) == GPIO.LOW and \
+                GPIO.input(sensors["LimitXLeft"]) == GPIO.LOW:
             GPIO.output(actuators["XmotorLeft"], GPIO.HIGH)
+        else:
+            GPIO.output(actuators["XmotorLeft"], GPIO.LOW)

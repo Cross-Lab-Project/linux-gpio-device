@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# Initialises GPIO pins that are necessary for executing example experiment
-#
-# Running once should be fine
 
-for i in 531; do 
+for i in 531 536 537 538; do 
 	echo $i > /sys/class/gpio/export
 done
 
