@@ -39,13 +39,13 @@ sudo ./install
 For running the Python example:
 
 * Open a PSPU web frontend using the json description in example.
-* Instantiate the GPIOs (only once) and start the Python example (instantiating GPIOs is only necessary when using the sysfs-based GPIO interface which is employed by the Python example:
+* Export the GPIOs (only once) and start the Python example (exporting GPIOs is only necessary when using the sysfs-based GPIO interface which is employed by the Python example:
 ```
 cd example
 ./init_gpios.sh
 python ./control_3axis.py
 ```
 
-The C example can be run without instantiating GPIOs as it uses the gpiod interface. For compiling please install libgpiod-dev upfront and
+The C example can be run without exporting GPIOs as it uses the gpiod interface. For compiling please install libgpiod-dev upfront and
 link libgpiod.
 
